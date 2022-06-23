@@ -39,13 +39,15 @@
       // Fungsi yang digunakan untuk menambahkan tulisan
       // Jangan ubah cara deklarasi fungsinya, cukup isi saja
       function fnClickHandler(toDoItem) {
-        if (toDoItem.type === 'change' || toDoItem.key === 'Enter') {
-          const type = toDoItem.type
-          const li = document.createElement('li');
+        if (toDoItem?.type === 'click' || toDoItem?.key === "Enter") {
+          const li = document.createElement('li')
           li.style.margin = '1rem 10rem';
           li.style.color = 'skyblue'
           li.appendChild(document.createTextNode(fnData));
           output.append(li)
+
+          fnData = ''
+          input.value = ''
         }
       }
 
